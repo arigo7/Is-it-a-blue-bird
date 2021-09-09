@@ -1,0 +1,50 @@
+<!-- first part  -->
+<!-- <h2>{{ hero }}</h2> -->
+
+<!-- second part -->
+<!--  the word uppercase in the interpolation binding after the pipe operator (|), actiVates the built in UppercasePipe -->
+<!-- Pipes "|", are good for formatting strings, currency amounts, dates and other display data  -->
+<!-- <h2>{{ hero.name | uppercase}} Details</h2>
+<div><span>id: </span>{{hero.id}}</div> -->
+
+<!-- Changes the  -->
+<!-- <div><span>name: </span> {{hero.name}}</div> -->
+<!-- <div>
+  <label for="name">Hero name: </label>
+  <input id ="name" [(ngModel)]="hero.name" placeholder="name">
+</div> -->
+
+<!-- Third part -->
+<h2>Marvel Heroes</h2>
+<ul class="heroes">
+  <!-- *ngFor is a repeater directive, repeats host element (<li>) for each element in a list (heroes is the mock heroes list) -->
+    <!-- (click)="onSelect(hero) event binding -->
+    <!-- (click) tell Angular to "listen" for the <li> click event. When clicked on li, Angular executes onSelect(hero) (yet to be defined on heroes.component.ts)-->
+  <li *ngFor="let hero of heroes" 
+  [class.selected]="hero === selectedHero"
+  (click)="onSelect(hero)">
+    <span class="badge">{{ hero.id }}</span>  {{ hero.name }}
+  </li>
+</ul>
+
+<!-- component only displays the selected hero details if the selectedHero exists so we wrap detail HTML in a <div> with Angular's *ngIf directive to the <div> and set it to selectedHero. -->
+
+<!-- Part 3 - cut hero detail from here, paste it over the generated boilerplate in the HeroDetailComponent template -->
+
+<!-- <div *ngIf="selectedHero">
+
+  <h2>{{ selectedHero.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{selectedHero.id}}</div>
+  <div>
+    <label for="hero-name">Hero name: </label>
+    <input id ="hero-name" [(ngModel)]="selectedHero.name" 
+    placeholder="name">
+  </div>
+
+</div> -->
+
+<!-- P3 Add <app-hero-detail> elem near bottom of HeroesComponent template, where hero detail was -->
+
+<!-- It's a one way dada binding from selectedHero prop (of HeroesComponent) to the hero prop (of target element)-->
+<!-- Bind HeroesComponent.selectedHero to the element's hero property like this-->
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
