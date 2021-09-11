@@ -1,9 +1,19 @@
 
 <h1>{{ title }}</h1>
+
+<!-- P5 <nav> element and, within that, an anchor element that, when clicked, triggers navigation to the HeroesComponent -->
+<nav>
+  <!-- P5 routerLink attribute is set to "/heroes", the string that the router matches to the route to HeroesComponent -->
+  <!-- routerLink - selector for the RouterLink directive that turns user clicks into router navigations - another of the public directives in the RouterModule -->
+  <a routerLink="/heroes"> Heroes </a>
+</nav>
+<!-- P5  tells the router where to display routed views-->
+<router-outlet></router-outlet>
+
 <!-- app-heroes is the element selector for the HeroesComponent -->
-<app-heroes></app-heroes>
+<!-- P5 AppComponent template no longer needs this because the app will only display the HeroesComponent when user navigates to it -->
+<!-- <app-heroes></app-heroes> -->
 
 <!-- display the generated MessagesComponent -->
 <app-messages></app-messages>
 
-<router-outlet></router-outlet>
