@@ -17,6 +17,7 @@ export class HeroDetailComponent implements OnInit {
   // <app-hero-detail [hero]="selectedHero"></app-hero-detail>
   @Input() hero?: Hero;
 
+  
   constructor() { }
 
   ngOnInit(): void {
