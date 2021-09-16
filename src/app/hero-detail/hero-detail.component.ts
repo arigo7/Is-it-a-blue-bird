@@ -2,6 +2,10 @@
 import { Component, OnInit, Input } from '@angular/core';
 // P3. template binds to the component's hero property which is of type Hero.
 import { Hero } from '../hero';
+//  P5 for the Routable HeroDetailComponent
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
+import { HeroService } from '../heroes/hero.service';
 
 // This component only receives a hero object through its hero property and displays it.
 @Component({
@@ -17,10 +21,25 @@ export class HeroDetailComponent implements OnInit {
   // <app-hero-detail [hero]="selectedHero"></app-hero-detail>
   @Input() hero?: Hero;
 
-  
-  constructor() { }
+  // P5 inject the ActivatedRoute, HeroService, and Location services into the constructor, saving their values in private fields:
+  constructor(
+    private route: ActivatedRoute,
+    private heroService: HeroService,
+    private location: Location
+  ) { }
 
   ngOnInit(): void {
+    this.getHero();
+  }
+
+  getHero(): void {
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    this.heroService.getHero(id)
+      .subscribe(hero => this.hero = hero);
+  }
+
+  goBack(): void {
+    this.location.back()
   }
 
 }

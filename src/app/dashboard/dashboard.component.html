@@ -1,6 +1,9 @@
-<h2>Top Heroes</h2>
+<h2>Marvel's Top Heroes</h2>
 <div class="heroes-menu">
-  <a *ngFor="let hero of heroes">
+  <!-- *ngFor repeater creates as many links as are in the component's heroes array. -->
+  <!-- interpolation binding within the *ngFor repeater to insert the current iteration's hero.id into each routerLink -->
+  <a *ngFor="let hero of heroes"
+  routerLink="/detail/{{ hero.id }}">
     {{ hero.name }}
   </a>
 </div>

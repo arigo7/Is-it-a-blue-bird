@@ -6,20 +6,32 @@ import { RouterModule, Routes } from '@angular/router';
 // HeroesComponent, will give the Router somewhere to go once  routes are configured
 import { HeroesComponent } from './heroes/heroes.component';
 
+import { DashboardComponent } from './dashboard/dashboard.component';
+
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+
 // next part of the file is where routes get configured 
 // Routes tell the Router which view to display user clicks a link or pastes a URL into the browser address bar
 
 // a typical Route has properties: path (URL) and component (that router should create when going to route (URL))
 const routes: Routes = [
-  {path: 'heroes', component: HeroesComponent}
+  // makes the application navigate to the dashboard automatically
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full'},
+  //  add to routes array a route matching a path to DashboardComponent
+  { path: 'dashboard', component: DashboardComponent},
+
+  { path: 'detail/:id', component: HeroDetailComponent},
+
+  { path: 'heroes', component: HeroesComponent }
+  
 ];
 
 // NgModule metadata initializes router and starts listening for browser location changes
 @NgModule({
   //  adds RouterModule to AppRoutingModule imports array and configures it with the routes by calling RouterModule.forRoot()
 //  called forRoot() bc router is configured at the apps root level
-  imports: [RouterModule.forRoot(routes)],
+  imports: [ RouterModule.forRoot(routes) ],
   // exporting the RouterModule makes it available throughout the app
-  exports: [RouterModule]
+  exports: [ RouterModule ]
 })
 export class AppRoutingModule { }

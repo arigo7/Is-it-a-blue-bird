@@ -27,7 +27,8 @@ export class HeroesComponent implements OnInit {
   
   // '?' what is this again?
   // rename component's hero property to selectedHero but don't assign it, no selected hero when app starts
-  selectedHero?: Hero;
+  // selectedHero?: Hero;
+//  P5 code selectedHero? - erase 
 
   // first, hero is a string
   // hero = 'Windstorm';
@@ -51,7 +52,10 @@ export class HeroesComponent implements OnInit {
   // could call getHeroes() in constructor but it's not best practice - reserve constructor for minimal initialization (wiring constructor parameters to properties)
   // constructor shouldn't do anything, specially calling a function that makes HTTP requests to a remote server as a real data service would
   // private heroService: HeroService is the dependency injection token (this is the way to inject the class aka class dependency)
-  constructor(private heroService: HeroService, private messageService: MessageService) { }
+  // constructor(private heroService: HeroService, private messageService: MessageService) { }
+  //  P5 - pronniing away dead code
+  constructor(private heroService: HeroService) { }
+
 
   // lifecycle hook - it's a good place for a component to fetch its initial data (initialization logic)
   // ngOnInit(): void {
@@ -62,10 +66,11 @@ export class HeroesComponent implements OnInit {
   }
 
   // onSelect() method assigns the clicked hero from the template to the component's selectedHero
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-    this.messageService.add(`HeroesComponent: Selected hero id=${hero.id}`);
-  }
+  // P5 prunnning away dead code
+  // onSelect(hero: Hero): void {
+  //   this.selectedHero = hero;
+  //   this.messageService.add(`HeroesComponent: Selected hero id=${hero.id}`);
+  // }
 
   // P4 method retrieves heroes from service
   // synchronous signature - (meaning)  HeroService fetches heroes synchronously  and HeroesComponent consumes getHeroes() result as if heroes could be fetched synchronously        

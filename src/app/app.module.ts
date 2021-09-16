@@ -2,11 +2,13 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 // Heroe's component importing from component we just generated, does this get imported in the module automatically when I create the component
 import { HeroesComponent } from './heroes/heroes.component';
 //  NgModel lives here in Forms Module
 import { FormsModule } from '@angular/forms';
+
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';

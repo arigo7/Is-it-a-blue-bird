@@ -15,15 +15,25 @@
 </div> -->
 
 <!-- Third part -->
-<h2>Marvel Heroes</h2>
-<ul class="heroes">
+<!-- <h2>Marvel Heroes</h2>
+<ul class="heroes"> -->
   <!-- *ngFor is a repeater directive, repeats host element (<li>) for each element in a list (heroes is the mock heroes list) -->
     <!-- (click)="onSelect(hero) event binding -->
     <!-- (click) tell Angular to "listen" for the <li> click event. When clicked on li, Angular executes onSelect(hero) (yet to be defined on heroes.component.ts)-->
-  <li *ngFor="let hero of heroes" 
+  <!-- <li *ngFor="let hero of heroes" 
   [class.selected]="hero === selectedHero"
   (click)="onSelect(hero)">
     <span class="badge">{{ hero.id }}</span>  {{ hero.name }}
+  </li>
+</ul> -->
+
+<!-- P5  -->
+<h2>Marvel Heroes</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">
+    <a routerLink="/detail/{{ hero.id}}">
+      <span class="badge">{{ hero.id }}</span>  {{ hero.name }}
+    </a>
   </li>
 </ul>
 
@@ -47,4 +57,5 @@
 
 <!-- It's a one way dada binding from selectedHero prop (of HeroesComponent) to the hero prop (of target element)-->
 <!-- Bind HeroesComponent.selectedHero to the element's hero property like this-->
-<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+<!-- P5 erasing app hero detail - for now clicking on a hero does nothing, will fix with enabling routing to hero detail component -->
+<!-- <app-hero-detail [hero]="selectedHero"></app-hero-detail> -->
