@@ -48,7 +48,7 @@ export class HeroService {
     // of(HEROES) returns and Observable<Hero[]> that emits a single value (an array of mock heroes)
     const heroes = of(HEROES);
     // P4 Send message from heroService:
-    this.messageService.add('HeroService: fetched heroes')
+    this.messageService.add('UploadPictureService: upload picture')
     return heroes;
   }
   getHero(id: number): Observable<Hero> {

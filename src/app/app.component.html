@@ -1,14 +1,15 @@
 
-<h1>{{ title }}</h1>
-
-<!-- P5 <nav> element and, within that, an anchor element that, when clicked, triggers navigation to the HeroesComponent -->
 <nav>
-  <a routerLink="/dashboard">Dashboard </a>
+  <a routerLink="/dashboard">Welcome (Dashboard = nice to have changes welcome to different language) </a>
   <!-- P5 routerLink attribute is set to "/heroes", the string that the router matches to the route to HeroesComponent -->
   <!-- routerLink - selector for the RouterLink directive that turns user clicks into router navigations - another of the public directives in the RouterModule -->
   
-  <a routerLink="/heroes"> Heroes </a>
+  <a routerLink="/heroes"> Heroes (BIRD) </a>
 </nav>
+
+<h1>{{ title }}</h1>
+
+<!-- P5 <nav> element and, within that, an anchor element that, when clicked, triggers navigation to the HeroesComponent -->
 <!-- P5  tells the router where to display routed views-->
 <router-outlet></router-outlet>
 
@@ -16,6 +17,7 @@
 <!-- P5 AppComponent template no longer needs this because the app will only display the HeroesComponent when user navigates to it -->
 <!-- <app-heroes></app-heroes> -->
 
+<!-- Bird - don't need this here anymore, moved it to the messages -->
 <!-- display the generated MessagesComponent -->
-<app-messages></app-messages>
+<!-- <app-messages></app-messages> -->
 
