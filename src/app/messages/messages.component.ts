@@ -17,5 +17,9 @@ export class MessagesComponent implements OnInit {
 
   ngOnInit() {
   }
+  onFileChanged(event:any) {
+    const file = event.target.files[0]
+    console.log(file)
+  }
 
 }
