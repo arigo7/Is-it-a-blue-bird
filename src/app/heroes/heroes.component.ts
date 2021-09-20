@@ -1,15 +1,15 @@
 // always import Component from Angular core library 
 import { Component, OnInit } from '@angular/core';
 import { Hero } from '../hero';
+
 // importing mock heroes
 // P4 delete this because HeroService substitutes it (with injection)
 // import { HEROES } from '../mock-heroes';
 
 import { HeroService } from './hero.service';
+
 // to send and display msg each time user clicks on a hero, showing history of user's selections - which will help with Routing
-
 import { MessageService } from '../message.service';
-
 
 
 

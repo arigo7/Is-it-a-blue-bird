@@ -1,4 +1,8 @@
+<!-- html input of type file allows user to open browser file selection dialog and select one or more files-->
 
+<!-- with this input box, file can be selected from file system  -->
+<!-- need script  can be sent to backend so it can be sent to backend -->
+<!-- When the change event gets triggered, the file is not automatically uploaded to the backend by the browser -->
 <input type="file" class="file-input"
 (change)="onFileSelected($event)" #fileUpload>
 
