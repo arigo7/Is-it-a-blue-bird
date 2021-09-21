@@ -1,7 +1,11 @@
-// When the user chooses a file using the file upload dialog, an event of type change will be emitted.
+// UploadButton component
+// When the user chooses a file using the file upload dialog, an event of type change will be emitted - event will contain the list of files that the user selected on the target.files property
+// change event gets triggered - file is not automatically uploaded to the backend by the browser
+// need to trigger an HTTP request ourselves, in response to the change event
 
 import { Component } from '@angular/core';
-import { Injectable } from '@angular/core'; // tutorial adds it but not indicated yet if I'll use this later
+// tutorial adds it but not indicated yet if I'll use this later
+import { Injectable } from '@angular/core'; 
 import { HttpClient } from '@angular/common/http'; // same as above
 
 // @Injectable() where will this go? https://angular.io/guide/http
@@ -18,6 +22,7 @@ export class UploadButtonComponent {
     // private http: HttpClient
     ) { }
 
+  // event will contain the list of files that the user selected on the target.files property
   onFileSelected(event: any) {
     const file:File = event.target.files[0];
 

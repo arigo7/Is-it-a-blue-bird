@@ -1,6 +1,7 @@
 // MessagesComponent should display all messages, including the message sent by the HeroService when it fetches heroes
 
 import { Component, OnInit } from '@angular/core';
+
 // 1st import MessageService
 import { MessageService } from '../message.service';
 

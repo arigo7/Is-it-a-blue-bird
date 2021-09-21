@@ -2,3 +2,17 @@
 .file-input {
   display: none;
 }
+
+.upload-btn {
+  color: #555;
+  background-color: hsl(180, 58%, 55%);
+  margin-bottom: 12px;
+  padding: 1rem;
+  border-radius: 10px;
+  border-color: #777;
+  font-size: 1rem;
+}
+.upload-btn:hover {
+  color: rgb(158, 154, 154);
+  background-color: #f8c844;
+}

@@ -1,15 +1,22 @@
 <!-- html input of type file allows user to open browser file selection dialog and select one or more files-->
 
 <!-- with this input box, file can be selected from file system  -->
-<!-- need script  can be sent to backend so it can be sent to backend -->
+<!-- need script so it can be sent to backend -->
 <!-- When the change event gets triggered, the file is not automatically uploaded to the backend by the browser -->
+
+<!-- plain input (type file) is impossible to style properly so we end up doing is hiding it from the user, and then building  alternative file upload UI that uses the file input behind the scenes. -->
+
+<!-- On top - plain file input used to open file upload dialog and handle change eventn (hidden from user [scss file]) -->
 <input type="file" class="file-input"
 (change)="onFileSelected($event)" #fileUpload>
 
+<!-- file-upload container div - contains actual UI that user will see on the screen. -->
 <div class="file-upload">
+<!-- || = Or operator - so it returns file name or 'no file uploaded yet' -->
+{{ fileName || "No file uploaded yet." }}
 
-{{fileName || "No file uploaded yet."}}
-
+<!-- built with Angular materials on tutorial, I stiled it wit scss file-->
+<!-- upload teal button  and file input are linked - when user clicks button, click handler triggers file input via fileUpload.click(). -->
 <button mat-mini-fab color="primary" class="upload-btn"
 (click)="fileUpload.click()">
  <!-- <mat-icon>attach_file</mat-icon> -->
