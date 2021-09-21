@@ -6,7 +6,8 @@
 
 <!-- plain input (type file) is impossible to style properly so we end up doing is hiding it from the user, and then building  alternative file upload UI that uses the file input behind the scenes. -->
 
-<!-- On top - plain file input used to open file upload dialog and handle change eventn (hidden from user [scss file]) -->
+<!-- On top - plain file input used to open file upload dialog and handle change event (hidden from user [scss file]) -->
+<!-- onFileSelected listener-->
 <input type="file" class="file-input"
 (change)="onFileSelected($event)" #fileUpload>
 
