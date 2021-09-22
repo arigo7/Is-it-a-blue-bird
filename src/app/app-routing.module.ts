@@ -1,3 +1,5 @@
+// app-routing.module.ts serves as a menas to specigy which component should be  shown or which module should be loaded when user navigates to URL path either directly or by means of actions like clicking a button
+
 import { NgModule } from '@angular/core';
 
 // First, the app-routing.module.ts file imports RouterModule and Routes so the application can have routing functionality
@@ -14,6 +16,8 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 // Routes tell the Router which view to display user clicks a link or pastes a URL into the browser address bar
 
 // a typical Route has properties: path (URL) and component (that router should create when going to route (URL))
+
+// another way of putting it - Routes array - is the mappping of which component or module should be loaded when user navigates to URL path either directly or clicking on button - this array objects have properties like path, component, loadChildren
 const routes: Routes = [
   // makes the application navigate to the dashboard automatically
   { path: '', redirectTo: '/dashboard', pathMatch: 'full'},

@@ -1,13 +1,13 @@
 <!-- html input of type file allows user to open browser file selection dialog and select one or more files-->
 
 <!-- with this input box, file can be selected from file system  -->
-<!-- need script so it can be sent to backend -->
+<!-- but, it need script so it can be sent to backend -->
 <!-- When the change event gets triggered, the file is not automatically uploaded to the backend by the browser -->
 
 <!-- plain input (type file) is impossible to style properly so we end up doing is hiding it from the user, and then building  alternative file upload UI that uses the file input behind the scenes. -->
 
 <!-- On top - plain file input used to open file upload dialog and handle change event (hidden from user [scss file]) -->
-<!-- onFileSelected listener-->
+<!-- onFileSelected (listener) gets executed and the event object ($event which can be added to a variable  with #fileUpload) gets forwarded-->
 <input type="file" class="file-input"
 (change)="onFileSelected($event)" #fileUpload>
 
