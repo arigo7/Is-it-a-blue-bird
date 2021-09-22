@@ -30,16 +30,23 @@ export class UploadButtonComponent {
     //  Prob need to check if type is of image here too, not just file
     if (file) {
       this.fileName = file.name;
+      //
+      // API VISION here 
+      const imageURL = "https://www.allaboutbirds.org/guide/assets/photo/297087301-1280px.jpg";
+
+      
+
+
+
+
       const formData = new FormData();
       formData.append("thumbnail", file);
 
-      // API VISION? here later
 
       // was file 
     // const upload$ = this.http.post("/api/thumbnail-upload", file);
 
     const upload$ = this.http.post("/api/thumbnail-upload", formData);
-
 
     upload$.subscribe()
     }
