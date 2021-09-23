@@ -56,18 +56,16 @@ export class UploadButtonComponent {
       reader.readAsDataURL(file);
       reader.onload = (_event) => {
         this.url = reader.result;
+        // so I can connect to analyze button?
+        return this.url
       }
-
 
       const formData = new FormData();
       formData.append("thumbnail", file);
 
-
       // was file 
     // const upload$ = this.http.post("/api/thumbnail-upload", file);
-
     const upload$ = this.http.post("/api/thumbnail-upload", formData);
-
     upload$.subscribe()
     }
   }

@@ -7,7 +7,7 @@
 <!-- display the generated MessagesComponent -->
 <!-- Don't need this here since my upload button works -->
 
-<!-- <app-messages></app-messages> -->
+<app-messages></app-messages>
 
 <hr>
 <br>
@@ -20,3 +20,21 @@
 <!-- analyze button will go here -->
 <!-- might need ngif image is loaded or something like that -->
 <app-upload-button></app-upload-button>
+
+<!-- I want to do something like this with the image-->
+<!-- <div *ngIf="selectedHero">
+
+  <h2>{{ selectedHero.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{selectedHero.id}}</div>
+  <div>
+    <label for="hero-name">Hero name: </label>
+    <input id ="hero-name" [(ngModel)]="selectedHero.name" 
+    placeholder="name">
+  </div>
+
+</div> -->
+<!-- <div *ngIf="url">
+
+    <img src={{url}}>
+</div>
+</div> -->
