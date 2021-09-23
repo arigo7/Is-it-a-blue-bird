@@ -16,6 +16,7 @@ import { UploadButtonComponent } from './upload-button/upload-button.component';
 
 // to be able to upload file (upload-button.component.ts) - through HttpClient - need to enable the module first here at NgModules
 import { HttpClientModule } from '@angular/common/http';
+import { AnalyzeButtonComponent } from './analyze-button/analyze-button.component';
 
 
 
@@ -30,7 +31,8 @@ import { HttpClientModule } from '@angular/common/http';
     HeroDetailComponent,
     MessagesComponent,
     DashboardComponent,
-    UploadButtonComponent
+    UploadButtonComponent,
+    AnalyzeButtonComponent
   
   ],
   // imports property: other modules whose exported classes are needed by component templates are declared here
