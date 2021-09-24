@@ -1,27 +1,26 @@
 <h2>Upload a photo</h2>
 
-<p>Click on upload an image to determine if there is a bird within the image: </p>
+<p>Click on attach file to upload an image. Once picture uploads, click on the analyze button to determine if there is a blue bird within the image: </p>
 
-
-<!-- Moved here since I want this to be my upload page *main page* -->
-<!-- display the generated MessagesComponent -->
-<!-- Don't need this here since my upload button works -->
-
+<!-- display the generated MessagesComponent - button TOUR OF HEROES-->
 <app-messages></app-messages>
 
 <hr>
 <br>
-<p>This is the upload button component!!!</p>
+<p>Upload button component!</p>
 <app-upload-button></app-upload-button>
 
 <hr>
 <br>
-<p>This is the placeholder for Analyze button component!!!, playing with attach file button </p>
+<p>Placeholder for -- ANALYZE button component --  </p>
 <!-- analyze button will go here -->
-<!-- might need ngif image is loaded or something like that -->
+<!-- Can I use *ngif image is loaded or something like that? -->
+<!-- DO I NEED TO ATTACH A SERVICE TO ANALYZE BUTTON COMPONENT ?-->
+<!-- DO I NEED ROUTING SO IT ROUTES TO API LIKE MESSAGES COMPONENT OR LIKE HERO SERVICE? -->
+<!-- Where should <img src={{url}}>  (and it's part of UPLOAD BUTTON right now) live so analyze button can be bound to when it shows up and show up only if image shows up? -->
 <app-upload-button></app-upload-button>
 
-<!-- I want to do something like this with the image-->
+<!-- I was thinking to do something like this with the image-->
 <!-- <div *ngIf="selectedHero">
 
   <h2>{{ selectedHero.name | uppercase}} Details</h2>
