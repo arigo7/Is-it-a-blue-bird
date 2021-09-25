@@ -16,13 +16,19 @@
 <!-- || = Or operator - so it returns file name or 'no file uploaded yet' -->
 
 {{ fileName || "No file uploaded yet." }}
-
+<!-- <div>{{imagePath}}</div> -->
 <!-- built with Angular materials on tutorial, I stiled it wit scss file-->
 <!-- upload teal button  and file input are linked - when user clicks button, click handler triggers file input via fileUpload.click(). -->
 <button mat-mini-fab color="primary" class="upload-btn"
 (click)="fileUpload.click()">
- <!-- <mat-icon>attach_file</mat-icon> -->
-attach_file
+<!-- <mat-icon>attach_file</mat-icon> -->
+Attach file
+</button>
+
+<button mat-mini-fab color="primary" class="upload-btn"
+(click)="analyze($event)">
+<!-- <mat-icon>attach_file</mat-icon> -->
+Analyze
 </button>
 
 <img src={{url}}>
