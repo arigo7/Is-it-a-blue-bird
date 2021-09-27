@@ -2,10 +2,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero } from '../hero';
 
-// importing mock heroes
-// P4 delete this because HeroService substitutes it (with injection)
-// import { HEROES } from '../mock-heroes';
-
 import { HeroService } from './hero.service';
 
 // to send and display msg each time user clicks on a hero, showing history of user's selections - which will help with Routing
@@ -22,25 +18,6 @@ import { MessageService } from '../message.service';
 
 // always export component class so it can be imported elsewhere
 export class HeroesComponent implements OnInit {
-  
-  // '?' what is this again?
-  // rename component's hero property to selectedHero but don't assign it, no selected hero when app starts
-  // selectedHero?: Hero;
-//  P5 code selectedHero? - erase 
-
-  // first, hero is a string
-  // hero = 'Windstorm';
-  
-  // changed to hero is an object
-  // hero: Hero = {
-  //   id: 1,
-  //   name: 'Windstorm'
-  // };
-  // <li *ngFor="let hero of heroes"> replaces the hard coding of Windstorm - 
-
-  // P4 Replacing this definition of  heroes property (HEROES mock-heroes.ts)
-  // heroes = HEROES;
-
   // with this declaration
   heroes: Hero[] = [];
 

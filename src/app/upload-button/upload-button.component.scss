@@ -4,15 +4,31 @@
 }
 
 .upload-btn {
-  color: #555;
-  background-color: hsl(339, 95%, 47%);
+  color: rgb(255, 255, 255);
+  background-color: hsl(349, 72%, 60%);
   margin-bottom: 12px;
-  padding: 1rem;
+  padding: 2rem;
   border-radius: 10px;
-  border-color: #777;
-  font-size: 1rem;
+  border-color: #999;
+  font-size: 1.5rem;
 }
 .upload-btn:hover {
+  color: #555;
+  // color: rgb(158, 154, 154);
+  background-color: #f8c844;
+}
+
+.analyze-btn {
+  color: #555;
+  background-color: hsl(164, 66%, 65%);
+  margin-bottom: 12px;
+  padding: 2rem;
+  border-radius: 10px;
+  border-color: #777;
+  font-size: 1.5rem;
+  border-color: hsl(164, 66%, 65%);
+}
+.analyze-btn:hover {
   color: rgb(158, 154, 154);
   background-color: #f8c844;
 }

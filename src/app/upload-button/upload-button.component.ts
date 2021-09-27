@@ -4,7 +4,6 @@
 // need to trigger an HTTP request, in response to the change event
 
 import { Component } from '@angular/core';
-
 import { Injectable } from '@angular/core'; 
 import { UploadService } from './upload.service';
 
@@ -22,12 +21,17 @@ export class UploadButtonComponent {
   uploadedFile?: File = undefined;
   message = 'Only images are supported';
   url: string | ArrayBuffer | null = '';
+
+  // private analyzeService parameter of type UploadService to constructor - could call analyzeVision() in constructor but it's not best practice -- see TOH
+  // private analyzeService is the dependency injection token (toinject class - aka class dependency)
   constructor(
     // http type service (analyze)
     private analyzeService: UploadService, 
     // example a resolver / routing - here you would get the route to activate it and subscribe data
     ) { }
 
+  // do I need an ngOnInit() {} here?
+  
   // event listener - will contain the list of files that the user selected on the target.files property
   // EVent is better because having correct type
   onFileSelected(event: any) {
@@ -45,12 +49,9 @@ export class UploadButtonComponent {
       this.fileName = file.name;
       this.uploadedFile = file;
   
-
       // So image uploads and shows up right away
       const reader = new FileReader();
-
       reader.readAsDataURL(file);
-
       // wrap this into an observable
       reader.onload = (_event) => {
         this.url = reader.result;
@@ -60,8 +61,6 @@ export class UploadButtonComponent {
         return this.url;
       };
     }
-
-
   }
 
   analyze(event: any){
