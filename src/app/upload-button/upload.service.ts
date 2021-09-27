@@ -12,7 +12,6 @@ import { Observable, of } from 'rxjs';
 })
 export class UploadService {
   fileName = '';
-  // Only messages are supported
   message = 'Only images are supported';
 
   // variable for imagePath which I don't use but might use for vision API later

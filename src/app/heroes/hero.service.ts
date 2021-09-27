@@ -1,6 +1,6 @@
 // Services are a way to share information among classes that don't know each other (message service and inject it in two places)
 // 1. in HeroService which uses the service to send a message
-// 2. In MessagesComponent which displays that message and also displays the ID when user clicks a hero
+// 2. In (removed) MessagesComponent which displays that message and also displays the ID when user clicks a hero
 
 // Dependency injection - services or objects that a class needs to perform its function
 // DI - design pattern in which a class requests dependencies from external sources rather than creating them.
@@ -17,9 +17,6 @@ import { HEROES } from '../mock-heroes';
 // for now simulating getting data from server with RxJS of() function
 import { Observable, of } from 'rxjs';
 
-//  inject MessageService into HeroService, 1st import MessageService
-// import { MessageService } from '../message.service';
-
 // @Injectable () specifies that this class can be used in the DI system. The metadata, 'providedIn: 'root'' (makes) means 'HeroService' is visible throughout the app
 
 // must make HeroService available to DI system before it can be injected into HeroesComponent by registering a provider (can create/deliver a service, in this case instantiates HeroService class to provide the service)
@@ -33,10 +30,8 @@ import { Observable, of } from 'rxjs';
 })
 export class HeroService {
 
-  // parameter declares private messageService property which will inject the singleton MessageService into that property when it creates HeroService
-  // typical "service in service" scenario: injecting MessageService into HeroService into HeroesComponent
+  
   constructor(
-    // private messageService: MessageService
     ) { }
 
   // add getHeroes method to return the mock heroes
@@ -50,14 +45,12 @@ export class HeroService {
     // of(HEROES) returns and Observable<Hero[]> that emits a single value (an array of mock heroes)
     const heroes = of(HEROES);
     // P4 Send message from heroService:
-    // this.messageService.add('HeroService: fetched heroes')
     return heroes;
   }
   getHero(id: number): Observable<Hero> {
     // For now, assume that a hero with the specified `id` always exists
     // Error handling will be added in the next step of the tutorial
     const hero = HEROES.find(h => h.id === id)!;
-    // this.messageService.add(`HeroService: fetched hero id=${id}`);
     return of(hero);
   }
 }
