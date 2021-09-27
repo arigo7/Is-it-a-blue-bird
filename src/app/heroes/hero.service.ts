@@ -18,7 +18,7 @@ import { HEROES } from '../mock-heroes';
 import { Observable, of } from 'rxjs';
 
 //  inject MessageService into HeroService, 1st import MessageService
-import { MessageService } from '../message.service';
+// import { MessageService } from '../message.service';
 
 // @Injectable () specifies that this class can be used in the DI system. The metadata, 'providedIn: 'root'' (makes) means 'HeroService' is visible throughout the app
 
@@ -35,7 +35,9 @@ export class HeroService {
 
   // parameter declares private messageService property which will inject the singleton MessageService into that property when it creates HeroService
   // typical "service in service" scenario: injecting MessageService into HeroService into HeroesComponent
-  constructor(private messageService: MessageService) { }
+  constructor(
+    // private messageService: MessageService
+    ) { }
 
   // add getHeroes method to return the mock heroes
 // HeroService.getHeroes() method has a synchronous signature, implying - HeroService can fetch heroes synchronously
@@ -48,14 +50,14 @@ export class HeroService {
     // of(HEROES) returns and Observable<Hero[]> that emits a single value (an array of mock heroes)
     const heroes = of(HEROES);
     // P4 Send message from heroService:
-    this.messageService.add('HeroService: fetched heroes')
+    // this.messageService.add('HeroService: fetched heroes')
     return heroes;
   }
   getHero(id: number): Observable<Hero> {
     // For now, assume that a hero with the specified `id` always exists
     // Error handling will be added in the next step of the tutorial
     const hero = HEROES.find(h => h.id === id)!;
-    this.messageService.add(`HeroService: fetched hero id=${id}`);
+    // this.messageService.add(`HeroService: fetched hero id=${id}`);
     return of(hero);
   }
 }

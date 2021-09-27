@@ -10,7 +10,7 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { FormsModule } from '@angular/forms';
 
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
-import { MessagesComponent } from './messages/messages.component';
+// import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UploadButtonComponent } from './upload-button/upload-button.component';
 
@@ -29,7 +29,7 @@ import { AnalyzeButtonComponent } from './analyze-button/analyze-button.componen
     HeroesComponent,
     // "ng generate componentName" adds the HeroDetailComponent as a declaration in the @NgModule decorator of the src/app/app.module.ts file
     HeroDetailComponent,
-    MessagesComponent,
+    // MessagesComponent,
     DashboardComponent,
     UploadButtonComponent,
     AnalyzeButtonComponent

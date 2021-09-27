@@ -42,4 +42,9 @@ export class HeroDetailComponent implements OnInit {
     this.location.back()
   }
 
+  // Will take you to 
+  // goPageSource(): void {
+  //   this.location.back()
+  // }
+
 }

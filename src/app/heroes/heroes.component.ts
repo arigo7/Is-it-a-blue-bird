@@ -5,7 +5,7 @@ import { Hero } from '../hero';
 import { HeroService } from './hero.service';
 
 // to send and display msg each time user clicks on a hero, showing history of user's selections - which will help with Routing
-import { MessageService } from '../message.service';
+// import { MessageService } from '../message.service';
 
 // and annotate Component class with @Component which is a decorator function that specifies teh Angular metadata for the component
 @Component({

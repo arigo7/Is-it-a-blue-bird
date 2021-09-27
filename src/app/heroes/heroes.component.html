@@ -3,7 +3,7 @@
 <!-- P5  -->
 <h2>Welcome to my starter project home page</h2>
 
-<p>The framework and technologies used in this project:</p>
+<p>These are the frameworks and technologies used for this project:  </p>
 <ul class="heroes">
   <li *ngFor="let hero of heroes">
     <a routerLink="/detail/{{ hero.id}}">
@@ -11,3 +11,9 @@
     </a>
   </li>
 </ul>
+
+<p> To upload a picture and analyze it, click</p>
+  <span>
+    <a routerLink="/dashboard">Upload</a>
+  </span>
+  <p> here or in the navigation bar</p>
