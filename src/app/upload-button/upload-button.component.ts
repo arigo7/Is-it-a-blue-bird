@@ -16,11 +16,13 @@ import { UploadService } from './upload.service';
   styleUrls: ['./upload-button.component.scss']
 })
 export class UploadButtonComponent {
-
+  // error without the ?
+  encodedFile?: string; 
   fileName: string = '';
   uploadedFile?: File = undefined;
   message = 'Only images are supported';
   url: string | ArrayBuffer | null = '';
+
 
   // private analyzeService parameter of type UploadService to constructor - could call analyzeVision() in constructor but it's not best practice -- see TOH
   // private analyzeService is the dependency injection token (toinject class - aka class dependency)
@@ -44,6 +46,7 @@ export class UploadButtonComponent {
         console.log(this.message);
         // maybe I can do an alert here instead?
         this.fileName = this.message;
+        // console.log(this.fileName)
         return;
       }
       this.fileName = file.name;
@@ -55,11 +58,13 @@ export class UploadButtonComponent {
       // wrap this into an observable
       reader.onload = (_event) => {
         this.url = reader.result;
-        // console.log(reader.
-
-        // bound to image tag
+        console.log(reader.result)
+        
+        // bound to image tag and encoded
+        //  encode file
         return this.url;
       };
+      
     }
   }
 
