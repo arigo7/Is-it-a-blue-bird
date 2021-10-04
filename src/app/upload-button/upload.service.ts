@@ -43,11 +43,10 @@ export class UploadService {
       }
     ]
   }
-  // environment.VISION_API_KEY
     // POST https://vision.googleapis.com/v1/images:annotate?key=YOUR_API_KEY
     // return null;
     console.log(requestBody)
-    console.log(environment.VISION_API_KEY)
+    // console.log(environment.VISION_API_KEY)
     return this.httpService.post(`https://vision.googleapis.com/v1/images:annotate?key=${environment.VISION_API_KEY}`, requestBody)
     
     
