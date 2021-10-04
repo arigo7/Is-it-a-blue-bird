@@ -68,10 +68,17 @@ export class UploadButtonComponent {
     }
   }
 
+  // POST https://vision.googleapis.com/v1/images:annotate?key=YOUR_API_KEY
+
   analyze(event: any){
-    if(this.uploadedFile){
-      this.analyzeService.analyzeVision(this.uploadedFile)?.subscribe(
-        result => null
+    
+    // if(this.uploadedFile){
+    //   this.analyzeService.analyzeVision(this.uploadedFile)?.subscribe(
+    //     result => null
+    //   )
+    if(this.url){
+      this.analyzeService.analyzeVision(this.url)?.subscribe(
+        result => console.log(result)
       )
     }
   }

@@ -46,6 +46,4 @@ Thumbs.db
 
 
 # Angular Environment Variables in .gitignore
-
-environment.prod.ts
-environment.ts
+src/environments/**

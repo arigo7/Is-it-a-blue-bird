@@ -1,3 +1,5 @@
+// copies env variables from .env and put them in envrironment .ts
+
 /* tslint:disable */
 // @ts-nocheck
 const { writeFile, existsSync, mkdirSync } = require('fs');

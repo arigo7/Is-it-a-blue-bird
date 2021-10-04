@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'; //
 import { Observable, of } from 'rxjs';
 
+
+
 @Injectable({
   providedIn: 'root',
 })
@@ -17,7 +19,7 @@ export class UploadService {
 
   constructor(private httpService: HttpClient) {}
 
-  analyzeVision(file: File): Observable<string> | null | undefined {
+  analyzeVision(file: string | ArrayBuffer | null): Observable<string> | null | undefined {
 
 
   //  Call vision api code
