@@ -19,6 +19,7 @@
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
+    "@google-cloud/vision": "^2.4.0",
     "rxjs": "~6.6.0",
     "ts-node": "^10.2.1",
     "tslib": "^2.3.0",

@@ -9,45 +9,45 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root',
 })
 export class UploadService {
-  fileName = '';
-  message = 'Only images are supported';
-
-  // variable for imagePath which I don't use but might use for vision API later
-  imagePath: string | null = '';
-
-  // gives me error without this, it doesn't like only url = ''
-  url: string | ArrayBuffer | null = '';
 
   constructor(private httpService: HttpClient) {}
-  // file is this.url
+  // analyzeVision - has an asynchronous signature with (Oservable<object>)
+  // file = encoded (this.url)
+  // file = encoded (this.encodedFile)
+
   analyzeVision(file: string | ArrayBuffer | null): Observable<object> | null | undefined {
 
 
-  //  Call vision api code
-    
-  
+  //  Call vision api request object
   const requestBody = {
     "requests": [
       {
-        "image": file,
+        "image": {
+          "content" : file
+        },
         "features": [
           {
             "type": "LABEL_DETECTION",
-            "maxResults": 3
-          },
-          {
-            "type": "IMAGE PROPERTIES",
-            "maxResults": 10
+            "maxResults": 20
           }
+          // ,
+          // {
+          //   "type": "IMAGE_PROPERTIES",
+          //   "maxResults": 4
+          // }
         ]
       }
     ]
   }
-    // POST https://vision.googleapis.com/v1/images:annotate?key=YOUR_API_KEY
+
+ 
+  console.log(requestBody)
+  // console.log(environment.VISION_API_KEY)
+
+  // POST https://vision.googleapis.com/v1/images:annotate?key=YOUR_API_KEY
+  // POST request to vision API
+    return this.httpService.post(`https://vision.googleapis.com/v1/images:annotate?key=${environment.VISION_API_KEY_A}`, requestBody)
     // return null;
-    console.log(requestBody)
-    // console.log(environment.VISION_API_KEY)
-    return this.httpService.post(`https://vision.googleapis.com/v1/images:annotate?key=${environment.VISION_API_KEY}`, requestBody)
     
     
   }

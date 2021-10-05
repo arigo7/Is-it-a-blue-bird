@@ -45,7 +45,9 @@ const environmentFileContent = `
 
 export const environment = {
     production: ${isProduction},
-    VISION_API_KEY: '${process.env.VISION_API_KEY}'
+    VISION_API_KEY: '${process.env.VISION_API_KEY}',
+    VISION_API_KEY_A: '${process.env.VISION_API_KEY_A}'
+
 };
 `;
 

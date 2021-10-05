@@ -6,6 +6,7 @@
 import { Component } from '@angular/core';
 import { Injectable } from '@angular/core'; 
 import { UploadService } from './upload.service';
+import { ImageAnnotatorClient } from '@google-cloud/vision';
 
 // probably don't need injectable here anymore since I moved service??
 //  can a component be injected or just a service because I want button analyze to show up when image uploads
@@ -60,25 +61,68 @@ export class UploadButtonComponent {
         this.url = reader.result;
         console.log(reader.result)
         
-        // bound to image tag and encoded
+        // include only buffer of image not path ?
+        // strip off the data: url prefix to get just the base64-encoded bytes
+        if (typeof this.url === "string") {
+          this.encodedFile = (this.url).replace(/^data:image\/\w+;base64,/, "");
+          console.log(this.encodedFile)
+          console.log("type of this.encoded file is:")
+          console.log(typeof(this.encodedFile))
+          return this.encodedFile
+        }
+        else {
+          return "cannot extract encoded bytes"
+        }
         //  encode file
-        return this.url;
+        // bound to image tag and encoded
+        // return this.url;
+        return this.encodedFile;
+        // return this.url;
       };
       
     }
   }
 
   // POST https://vision.googleapis.com/v1/images:annotate?key=YOUR_API_KEY
-
   analyze(event: any){
-    
-    // if(this.uploadedFile){
-    //   this.analyzeService.analyzeVision(this.uploadedFile)?.subscribe(
-    //     result => null
-    //   )
-    if(this.url){
-      this.analyzeService.analyzeVision(this.url)?.subscribe(
-        result => console.log(result)
+
+    if(this.encodedFile){
+      this.analyzeService.analyzeVision(this.encodedFile)?.subscribe(
+        (result:any) =>  
+        // console.log(result)
+
+        // { if label Annotations contains the word blue or bird is a blue bird
+          // variable true or false
+          // }
+          {
+            
+            let isBlue: boolean = false
+            let isBird: boolean = false
+            console.log(result)
+
+
+            // result.responses[""]
+            let responseAnotation = result.responses[0]["labelAnnotations"]// {..., description: blah }
+            const descriptions = responseAnotation
+                .map((annotation: any) => annotation.description.toLowerCase())
+            console.log(descriptions)
+
+            for (let word of descriptions) {
+              if ( word.includes('bird')) {
+                isBird = true
+              }
+              if ( word.includes('blue')) {
+                isBlue = true
+              }
+            }
+            if (isBlue && isBird ) {
+              console.log("It's a blue bird")
+            }
+            else {
+              console.log("it's not a blue bird")
+            }
+            // if()
+          }
       )
     }
   }
