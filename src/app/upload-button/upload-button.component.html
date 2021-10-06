@@ -54,3 +54,18 @@
         Analyze
     </button>
 </div>
+
+
+<!-- <div class="response-message">
+    {{ fileName || "" }}
+</div> -->
+
+<div class="output-msg">
+    <!-- {{ fileName || "No file uploaded yet." }} -->
+    {{ outputMessage }}
+</div>
+
+<div *ngIf="outputMessage" class="confused-cat">
+    <!-- <img src="{{  }}" /> -->
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS18JiUCwG_HrPFRb0dpCN65WjOGLwvhX9Zw&usqp=CAU" />
+</div>

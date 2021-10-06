@@ -15,7 +15,8 @@ export class DashboardComponent implements OnInit {
 heroes: Hero[] = [];
 
   // The constructor expects Angular to inject the HeroService into a private heroService property
-  constructor(private heroService: HeroService) { }
+  constructor(private heroService: HeroService
+    ) { }
 
   // ngOnInit() lifecycle hook calls getHeroes()
   ngOnInit() {
