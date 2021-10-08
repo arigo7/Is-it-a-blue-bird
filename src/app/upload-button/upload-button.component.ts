@@ -18,7 +18,7 @@ import { UploadService } from './upload.service';
 })
 
 export class UploadButtonComponent {
-  // error without the ?
+  
   encodedFile?: string; 
   fileName: string = '';
   uploadedFile?: File = undefined;

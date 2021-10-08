@@ -29,3 +29,6 @@ https://basarat.gitbook.io/typescript/future-javascript/for...of
 
 <!-- GCP encoding for Vision -->
 https://cloud.google.com/vision/docs/base64
+
+<!-- angular material -->
+https://www.youtube.com/watch?v=rhx4hZCiCIs

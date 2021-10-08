@@ -26,12 +26,11 @@
     />
 
     <button
-    mat-mini-fab
     color="primary"
     class="upload-btn"
     (click)="fileUpload.click()"
     >
-    <!-- <mat-icon>attach_file</mat-icon> -->
+    <mat-icon> add_a_photo </mat-icon>
     Attach file
     </button>
 </div>
@@ -40,17 +39,12 @@
 
 <div *ngIf="url" class="file-analyze">
     <button
-        mat-mini-fab
         color="primary"
         class="analyze-btn"
         (click)="analyze($event)"
     >
-        <!-- <mat-icon>wb_iridescent</mat-icon>
-        <mat-icon>toys</mat-icon> 
-        <mat-icon>assistant</mat-icon>
-        <mat-icon>blur_on</mat-icon>
-        <mat-icon>flare</mat-icon>
-        -->
+        <mat-icon>auto_fix_high</mat-icon>
+
         Analyze
     </button>
 </div>

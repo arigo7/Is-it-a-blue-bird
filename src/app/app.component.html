@@ -1,18 +1,54 @@
 
 <!-- APP COMPONENT -->
 
-<nav>
-  <!-- P5 routerLink attribute is set to "/heroes", the string that the router matches to the route to HeroesComponent -->
-  <!-- P5 <nav> element and, within that, an anchor element that, when clicked, triggers navigation to the HeroesComponent -->
-  <a routerLink="/heroes">   -- Home -- </a>
+<nav class="navbar" role="banner">
+  <img
+  width="100"
+  src="./assets/img/confusedCat1.jpeg"
+  />
+  <mat-icon>home</mat-icon>
+  <a routerLink="/heroes"
+    aria-label="Hello"
+    target="_blank"
+    rel="noopener"
+    href="http://localhost:4200/"
+    title="Is it a bird?"
   
-  <a routerLink="/dashboard">* Upload * </a>
-  
-  
+  > -- 
+    Welcome 
+    Hello 
+    Aloha 
+    Benvenuti 
+    こんにちは  -- 
+  </a>
+    <div class="spacer"></div>
+<div>
+<mat-icon>add_a_photo</mat-icon>  
+  <a routerLink="/dashboard">
+    Upload a photo
+  </a>
+</div>
+    <div class="spacer"></div>
 </nav>
+<!-- break space, add padding? -->
+<hr/>
+<hr/>
+<hr/>
+<hr/>
 
 <!-- APP TITLE DISPLAYED -->
-<h1>{{ title }}</h1>
+
+<div class="content" role="main">
+  
+  
+  <div class="card highlight-card card-small">
+    <!-- bird icon -->
+    <h1>
+      {{ title }}</h1>
+      <mat-icon>flutter_dash</mat-icon>
+  </div>
+
+</div>
 
 <!-- P5  tells the router where to display routed views-->
 <router-outlet></router-outlet>

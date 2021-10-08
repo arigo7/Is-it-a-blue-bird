@@ -15,7 +15,11 @@ import { UploadButtonComponent } from './upload-button/upload-button.component';
 
 // to be able to upload file (upload-button.component.ts) - through HttpClient - need to enable the module first here at NgModules
 import { HttpClientModule } from '@angular/common/http';
-import { AnalyzeButtonComponent } from './analyze-button/analyze-button.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+// angular material icon
+import { MatButtonModule } from '@angular/material/button'
+import { MatIconModule } from '@angular/material/icon'
 
 
 
@@ -29,9 +33,7 @@ import { AnalyzeButtonComponent } from './analyze-button/analyze-button.componen
     // "ng generate componentName" adds the HeroDetailComponent as a declaration in the @NgModule decorator of the src/app/app.module.ts file
     HeroDetailComponent,
     DashboardComponent,
-    UploadButtonComponent,
-    AnalyzeButtonComponent
-  
+    UploadButtonComponent,  
   ],
   // imports property: other modules whose exported classes are needed by component templates are declared here
   //  add FormModule to the @NGModule metadata's imports array, which contains a list of external modules that the app needs
@@ -40,8 +42,10 @@ import { AnalyzeButtonComponent } from './analyze-button/analyze-button.componen
     // import HttpClientModule after BrowserModule. with this Http can be injected into any service/component where we want to use it (reccomended to create a service for this)
     HttpClientModule,
     FormsModule,
-    AppRoutingModule
-
+    AppRoutingModule,
+    BrowserAnimationsModule, 
+    MatButtonModule,
+    MatIconModule
   ],
   // creators of services that this NgModule contributes to the global collection of services  - they become accessible in all parts of app. Its preferred to specify providers at component level
   providers: [],
