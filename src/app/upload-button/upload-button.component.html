@@ -1,8 +1,20 @@
-<div class="uploaded-img">
-    <img src="{{ url }}" />
+<hr class="content"><hr/>
+
+<div class="content card highlight-card card-small">
+    <!-- <p class="content card">
+        Picture Upload Area
+    </p> -->
+    <p class="content  highlight-card card-small">
+        Picture Upload Area
+    </p>
+    <div class="content card highlight-card card-small"> 
+
+        <img src="{{ url }}" />
+    </div>
+    
 </div>
 
-<!-- || = Or operator - so it returns file name or 'no file uploaded yet' -->
+
 <div class="img-name">
     <!-- {{ fileName || "No file uploaded yet." }} -->
     {{ fileName || "" }}

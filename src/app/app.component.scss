@@ -16,6 +16,11 @@ h5,
 h6 {
     margin: 8px 0;
 }
+h1 {
+    background-color: #1976d2;
+    color: white;
+    font-size: 1.2em;
+}
 p {
     margin: 0;
 }
@@ -35,12 +40,12 @@ p {
     font-weight: 600;
 }
 .navbar img {
-    margin: 0 16px;
+    margin: 0 40px;
 }
-.navbar #twitter-logo {
-    height: 40px;
-    margin: 0 8px;
-}
+// .navbar #twitter-logo {
+//     height: 40px;
+//     margin: 0 8px;
+// }
 .navbar #youtube-logo {
     height: 40px;
     margin: 0 16px;
@@ -64,9 +69,7 @@ svg.material-icons {
 svg.material-icons:not(:last-child) {
     margin-right: 8px;
 }
-.card svg.material-icons path {
-    fill: #888;
-}
+
 .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -118,24 +121,19 @@ svg.material-icons:not(:last-child) {
 .card.card.highlight-card span {
     margin-left: 60px;
 }
-svg#rocket {
-    width: 80px;
+svg#bird {
+    width: 90px;
     position: absolute;
-    left: -10px;
+    left: 250px;
     top: -24px;
 }
-svg#rocket-smoke {
-    height: calc(100vh - 95px);
-    position: absolute;
-    top: 10px;
-    right: 180px;
-    z-index: -10;
-}
+
 a,
 a:visited,
 a:hover {
-    color: #1976d2;
+    color: #ffffff;
     text-decoration: none;
+    font-size: 1.5em;
 }
 a:hover {
     color: #125699;
@@ -220,13 +218,13 @@ footer a {
     width: 16px;
     margin-right: 4px;
 }
-svg#clouds {
-    position: fixed;
-    bottom: -160px;
-    left: -230px;
-    z-index: -10;
-    width: 1920px;
-}
+// svg#clouds {
+//     position: fixed;
+//     bottom: -160px;
+//     left: -230px;
+//     z-index: -10;
+//     width: 1920px;
+// }
 /* Responsive Styles */
 @media screen and (max-width: 767px) {
     .card-container>*:not(.circle-link),
