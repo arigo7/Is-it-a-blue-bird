@@ -1,19 +1,25 @@
+<div class="content">
+
+  <h2 >Welcome to my starter project web app</h2>
+  
+  <p>These are the frameworks and technologies used for this project:  </p>
+  <ul class="heroes">
+    <li><a href="https://angular.io/">Angular</a></li>
+    <li><a href="https://www.typescriptlang.org">TypeScript</a></li>
+    <li><a href="https://cloud.google.com/vision">Google Cloud Vision API</a></li>
+    <li><a href="https://cloud.google.com/vision">Google Cloud Firebase</a></li>
 
 
-<!-- P5  -->
-<h2>Welcome to my starter project home page</h2>
-
-<p>These are the frameworks and technologies used for this project:  </p>
-<ul class="heroes">
-  <li *ngFor="let hero of heroes">
-    <a routerLink="/detail/{{ hero.id}}">
-      <span class="badge">{{ hero.id }}</span>  {{ hero.name }}
-    </a>
-  </li>
-</ul>
-
-<p> To upload a picture and analyze it, click</p>
+    <li *ngFor="let hero of heroes">
+      <a routerLink="/detail/{{ hero.id}}">
+        <span class="badge">{{ hero.id }}</span>  {{ hero.name }}
+      </a>
+    </li>
+  </ul>
+  
+  <p> To upload a picture and analyze it, click</p>
   <span>
     <a routerLink="/dashboard">Upload</a>
   </span>
   <p> here or in the navigation bar</p>
+</div>

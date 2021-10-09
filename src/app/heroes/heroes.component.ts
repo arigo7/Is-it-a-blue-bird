@@ -1,7 +1,6 @@
 // always import Component from Angular core library 
 import { Component, OnInit } from '@angular/core';
 import { Hero } from '../hero';
-
 import { HeroService } from './hero.service';
 
 // and annotate Component class with @Component which is a decorator function that specifies teh Angular metadata for the component
@@ -38,9 +37,6 @@ export class HeroesComponent implements OnInit {
 
   // P4 method retrieves heroes from service
   // synchronous signature - (meaning)  HeroService fetches heroes synchronously  and HeroesComponent consumes getHeroes() result as if heroes could be fetched synchronously        
-  // getHeroes(): void {
-  //   this.heroes = this.heroService.getHeroes();
-  // }
 
   // Observable.subscribe() is the critical difference
   // waits for the Observable to emit the array of heroes (could happen now, or several min from now)
@@ -51,6 +47,4 @@ export class HeroesComponent implements OnInit {
     this.heroService.getHeroes()
         .subscribe(heroes => this.heroes = heroes)
   }
-  
-
 }
