@@ -1,12 +1,9 @@
 
-<!-- <hr/> -->
 <div class="output-msg content">
-  <!-- {{ fileName || "No file uploaded yet." }} -->
   {{ outputMessage }}
 </div>
 
 <div *ngIf="outputMessage" class="confused-cat content">
-  <!-- <img src="{{  }}" /> -->
   <img
     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS18JiUCwG_HrPFRb0dpCN65WjOGLwvhX9Zw&usqp=CAU"
   />
@@ -28,8 +25,7 @@
           </button>
         </div>
     
-        <!-- ANALYZE BUTTON  that shows up if image is uploaded -->
-    
+        <!-- ANALYZE BUTTON -->
         <div *ngIf="url" class="file-analyze">
           <button color="primary" class="analyze-btn" (click)="analyze($event)">
             <mat-icon>auto_fix_high</mat-icon>
@@ -45,9 +41,6 @@
 
 </div>
 
-<!-- <div class="response-message">
-    {{ fileName || "" }}
-</div> -->
 
 <!--  <input> type="file" lets user open 'browser file selection dialog' and select one or more files, file can be selected from file system  -->
 <!-- When the event gets triggered, the file is not automatically uploaded to the backend by the browser -->

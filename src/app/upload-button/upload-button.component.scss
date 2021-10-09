@@ -5,91 +5,13 @@
   max-width: 1200px;
   flex-direction: column;
   align-items: center;
-  // background-color: rgb(228, 218, 218);
-      row-gap: 25px;
+  row-gap: 25px;
 
   background-color:rgb(228, 218, 218);
   // testing
 
 }
 
-.center {
-  flex-direction: column;
-  align-items: center;
-}
-
-// PARENT?
-.card-container {
-  background-color:darkseagreen;
-  display: flex;
-  // flex-wrap: wrap;
-  // flex-wrap: nowrap;
-  justify-content: center;
-  margin-top: 16px;
-}
-.card {
-  all: unset;
-  // border-radius: 4px;
-
-  border: 1px solid black;
-  background-color: #f8c844;
-
-  height: 40px;
-  width: 200px;
-  margin: 0 8px 16px;
-  padding: 16px;
-  display: flex;
-  // flex-direction: row;
-  flex-direction: column;
-
-  justify-content: center;
-  align-items: center;
-  transition: all 0.2s ease-in-out;
-  line-height: 24px;
-  // padding: 16px;
-}
-.card-container .card:not(:last-child) {
-  background-color: #f8c844;
-  border: 1px solid green;
-
-  margin-right: 0;
-}
-.card.card-small {
-  height: 16px;
-  width: 168px;
-
-  // background-color: hsl(349, 72%, 60%);
-}
-.card-container .card:not(.highlight-card) {
-  cursor: pointer;
-  background-color: hsl(349, 72%, 60%);
-}
-.card-container .card:not(.highlight-card):hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-  background-color: indigo;
-}
-.card-container .card:not(.highlight-card):hover .material-icons path {
-  fill: rgb(105, 103, 103);
-}
-.card.highlight-card {
-  // background-color: #1976d2;
-  // color: white;
-  // color: rgb(22, 208, 22);
-  // color: black;
-  font-weight: 600;
-  // border: none;
-  border-color: black;
-  width: auto;
-  min-width: 30%;
-  // position: relative;
-  // position: relative;
-  // top: 50px;
-  // bottom: 50px
-}
-// .card.card.highlight-card span {
-//   margin-left: 60px;
-// }
 
 // Buttons UPLOAD and ANALYZE
 .file-input {
@@ -110,13 +32,10 @@
   border-radius: 10px;
   border-color: #999;
   font-size: 1.5rem;
-  // position: relative;
-  // top: 50px;
 }
 .upload-btn:hover {
   color: #555;
-  // color: rgb(158, 154, 154);
-  background-color: #f8c844;
+    background-color: #f8c844;
 }
 
 .analyze-btn {
@@ -128,9 +47,7 @@
   border-color: #777;
   font-size: 1.5rem;
   border-color: hsl(164, 66%, 65%);
-  // position: relative;
-  // top: 50px;
-}
+    }
 .analyze-btn:hover {
   color: rgb(158, 154, 154);
   background-color: #f8c844;

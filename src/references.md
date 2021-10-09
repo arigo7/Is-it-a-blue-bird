@@ -32,3 +32,8 @@ https://cloud.google.com/vision/docs/base64
 
 <!-- angular material -->
 https://www.youtube.com/watch?v=rhx4hZCiCIs
+
+https://fonts.google.com/icons?icon.query=bird
+
+<!-- CSS -->
+https://stackoverflow.com/questions/3029422/how-do-i-auto-resize-an-image-to-fit-a-div-container
