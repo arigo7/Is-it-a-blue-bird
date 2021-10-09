@@ -1,15 +1,15 @@
 .content {
   display: flex;
-  margin: 82px auto 32px;
-  padding: 0 16px;
-  max-width: 960px;
+  margin: auto;
+  padding: 10px 16px;
+  max-width: 1200px;
   flex-direction: column;
   align-items: center;
   // background-color: rgb(228, 218, 218);
-  background-color: darksalmon;
+      row-gap: 25px;
+
+  background-color:whitesmoke;
   // testing
-  border: 1px solid rgb(197, 75, 75);
-  border-radius: 4px;
 
 }
 
@@ -96,6 +96,12 @@
   display: none;
 }
 
+.file-upload, 
+.file-analyze,
+.img-name {
+  padding-left: 10%;
+}
+
 .upload-btn {
   color: rgb(255, 255, 255);
   background-color: hsl(349, 72%, 60%);
@@ -128,4 +134,33 @@
 .analyze-btn:hover {
   color: rgb(158, 154, 154);
   background-color: #f8c844;
+}
+
+
+.image-area {
+  display: flex;
+  flex-direction:row
+}
+.buttons-div {
+  flex:1;
+  width: 20%;
+}
+.img-div {
+  flex: 3;
+  width: 20%;
+  margin: 15dp;
+  max-width: 700px;
+  max-height: 700px;
+}
+
+.output-msg {
+  font-size: 2em;
+  font-weight: bold;
+  color:lightsalmon;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+img {
+  max-width:100%;
+  max-height:100%;
 }
