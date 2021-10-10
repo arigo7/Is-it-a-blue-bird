@@ -2,12 +2,33 @@
 <div class="output-msg content">
   {{ outputMessage }}
 </div>
+<div class="output-msg content">
+  {{ outputMessageNot }}
+</div>
+
+<!-- <div *ngIf="outputMessage" class="confused-cat content">
+  <img
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS18JiUCwG_HrPFRb0dpCN65WjOGLwvhX9Zw&usqp=CAU"
+  />
+</div> -->
 
 <div *ngIf="outputMessage" class="confused-cat content">
   <img
     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS18JiUCwG_HrPFRb0dpCN65WjOGLwvhX9Zw&usqp=CAU"
   />
 </div>
+
+<div *ngIf="outputMessageNot" class="confused-cat content">
+  <img
+    src="../assets/img/confusedCat3.jpeg"
+  />
+</div>
+
+<!-- 
+  <div *ngIf="isValid; then thenTemplateName else elseTemplateName">
+    Here is never showing
+</div> 
+-->
 
 <div class="image-area content">
     <div class="buttons-div">
@@ -21,7 +42,7 @@
     
           <button color="primary" class="upload-btn" (click)="fileUpload.click()">
             <mat-icon> add_a_photo </mat-icon>
-            Upload photo
+            Attach file
           </button>
         </div>
     

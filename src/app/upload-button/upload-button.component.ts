@@ -25,7 +25,7 @@ export class UploadButtonComponent {
   message = 'Only images are supported';
   url: string | ArrayBuffer | null = '';
   outputMessage: string = ""
-
+  outputMessageNot: string = ""
   // Creates a client
   
   // private analyzeService parameter of type UploadService to constructor - could call analyzeVision() in constructor but it's not best practice -- see TOH
@@ -113,13 +113,13 @@ export class UploadButtonComponent {
               }
             }
             if (isBlue && isBird ) {
-              console.log("It's a blue bird")
+              console.log("It is a blue bird")
               this.outputMessage = "It's a blue bird"
               
             }
             else {
-              console.log("it's not a blue bird")
-              this.outputMessage = "It's NOT blue bird"
+              console.log("it is not a blue bird")
+              this.outputMessageNot = "It's NOT blue bird"
             }
           }
       )
