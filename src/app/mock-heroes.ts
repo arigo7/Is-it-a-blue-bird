@@ -4,6 +4,6 @@ import { Hero } from './hero'
 export const HEROES: Hero[] = [
 { id: 1, name: "Angular"},
 { id: 2, name: "Type Script"},
-{ id: 3, name: "Google Cloud App Engine"},
+{ id: 3, name: "Google Cloud Platform"},
 { id: 4, name: "Google Cloud Vision API"},
 ];

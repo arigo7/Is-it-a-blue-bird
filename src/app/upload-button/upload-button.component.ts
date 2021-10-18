@@ -115,11 +115,12 @@ export class UploadButtonComponent {
             if (isBlue && isBird ) {
               console.log("It is a blue bird")
               this.outputMessage = "It's a blue bird"
-              
+              this.outputMessageNot = ""
             }
             else {
               console.log("it is not a blue bird")
               this.outputMessageNot = "It's NOT blue bird"
+              this.outputMessage = ""
             }
           }
       )

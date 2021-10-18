@@ -23,7 +23,8 @@ export class HeroesComponent implements OnInit {
   // private heroService: HeroService is the dependency injection token (this is the way to inject the class aka class dependency)
 
   //  P5 - pronniing away dead code
-  constructor(private heroService: HeroService) { }
+  constructor(private heroService: HeroService 
+    ) { }
 
 
   // lifecycle hook - it's a good place for a component to fetch its initial data (initialization logic)
@@ -47,4 +48,6 @@ export class HeroesComponent implements OnInit {
     this.heroService.getHeroes()
         .subscribe(heroes => this.heroes = heroes)
   }
+  
+
 }

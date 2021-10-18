@@ -26,7 +26,7 @@
 
 .upload-btn {
   color: rgb(255, 255, 255);
-  background-color: hsl(349, 72%, 60%);
+  background-color: rgb(218, 14, 102);
   margin-bottom: 12px;
   padding: 2rem;
   border-radius: 10px;
@@ -35,7 +35,7 @@
 }
 .upload-btn:hover {
   color: #555;
-    background-color: #f8c844;
+    background-color: #d2c319;
 }
 
 .analyze-btn {
@@ -50,7 +50,7 @@
     }
 .analyze-btn:hover {
   color: rgb(158, 154, 154);
-  background-color: #f8c844;
+  background-color: #d2c319;
 }
 
 
@@ -71,7 +71,7 @@
 }
 
 .output-msg {
-  font-size: 2em;
+  font-size: 4em;
   font-weight: bold;
   color:lightsalmon;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;

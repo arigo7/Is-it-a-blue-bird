@@ -1,8 +1,8 @@
 
-<div class="output-msg content">
+<div *ngIf="outputMessage" class="output-msg content">
   {{ outputMessage }}
 </div>
-<div class="output-msg content">
+<div *ngIf="outputMessageNot" class="output-msg content">
   {{ outputMessageNot }}
 </div>
 
@@ -24,12 +24,6 @@
   />
 </div>
 
-<!-- 
-  <div *ngIf="isValid; then thenTemplateName else elseTemplateName">
-    Here is never showing
-</div> 
--->
-
 <div class="image-area content">
     <div class="buttons-div">
         <div class="file-upload">
@@ -42,7 +36,7 @@
     
           <button color="primary" class="upload-btn" (click)="fileUpload.click()">
             <mat-icon> add_a_photo </mat-icon>
-            Attach file
+            Upload
           </button>
         </div>
     
