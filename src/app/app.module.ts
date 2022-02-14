@@ -4,8 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
+// TODO: Update names/ componentes
 // Heroes component importing from component we just generated, does this get imported in the module automatically when I create the component
 import { HeroesComponent } from './heroes/heroes.component';
+// TODO: Remove unecessary imports/files
 //  NgModel lives here in Forms Module
 import { FormsModule } from '@angular/forms';
 
