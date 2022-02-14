@@ -1,5 +1,5 @@
 // UploadButton component
-// When the user chooses a file using the file upload dialog, an event of type change will be emitted - event will contain the list of files that the user selected on the target.files property
+// When user chooses a file using the file upload dialog, an event of type change will be emitted - event will contain the list of files that the user selected on the target.files property
 // change event gets triggered - file is not automatically uploaded to the "backend" by the browser
 // need to trigger an HTTP request, in response to the change event
 
@@ -35,8 +35,6 @@ export class UploadButtonComponent {
     private analyzeService: UploadService, 
     // example a resolver / routing - here you would get the route to activate it and subscribe data
     ) { }
-
-  // do I need an ngOnInit() {} here?
   
   // event listener - will contain the list of files that the user selected on the target.files property
   // Event is the correct type
@@ -44,11 +42,11 @@ export class UploadButtonComponent {
     console.log(event)
     const file:File = event.target.files[0];
     if (file) {
-      // This is to check only image type 
+      // Checks only image type 
       const mimeType = file.type;
       if (mimeType.match(/image\/*/) == null) {
         console.log(this.message);
-        // maybe I can do an alert here instead?
+        // TODO: check if maybe I can do an alert here instead
         this.fileName = this.message;
         // console.log(this.fileName)
         return;
